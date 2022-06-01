@@ -1,0 +1,47 @@
+    body{
+    
+      height: 576px;
+      width: 1024px;
+      background-size:cover;
+      font-family: cursive;
+    }
+    a {
+        left: 0;
+        top: 0;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 20px 20px;
+        text-decoration: none;
+      }
+      
+      
+      .active {
+        
+        width: 50%;
+      }
+      #bckBtn {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        padding: 10px;
+        border: none;
+        background:  #333;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 15%;
+      }
+      .div_class{
+        /* margin-left: 10px;
+       padding-left: 10px; */
+        height: 2cm;
+        width: 20%;
+        /* background-color: red; */
+        float: left;
+        align-items: center;
+    
+    }
+    .adds{
+        width: 1024px;
+        color: #ffffff;
+    }

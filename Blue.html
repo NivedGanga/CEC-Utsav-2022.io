@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap" rel="stylesheet">
+        <title>
+              Blue
+        </title>
+    </head>
+    <style>
+        body{
+          background-image: url("Design Content/Blue_bg.jpg");
+          background-size: cover;
+          font-family: 'Heebo', sans-serif;
+        
+        }
+        * {
+           cursor: none;
+          }
+          .button {
+  background-color: #132c87d9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: none;
+}
+        
+    </style>      
+    <body>
+        <form>
+            <input type="button" class = "button" value="GO BACK" onclick="history.back()">
+        </form>
+
+    <p style="color:rgb(255, 255, 255); font-size:100px; margin-left: 15%;margin-top: 18%;">
+        &nbsp;&nbsp;&nbsp;<b>000</b>
+        <br>
+        <b>SCORE</b>
+    </p>
+
+
+        
+<script>
+    (function() {
+    
+        const idleDurationSecs = 30;     
+        const redirectUrl = 'ad.html';  
+        let idleTimeout; 
+    
+        const resetIdleTimeout = function() {
+    
+              if(idleTimeout) clearTimeout(idleTimeout);
+    
+           
+            idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+        };
+    
+    
+        resetIdleTimeout();
+    
+     
+        ['click', 'touchstart', 'mousemove'].forEach(evt => 
+            document.addEventListener(evt, resetIdleTimeout, false)
+        );
+    
+    })();
+    </script>
+          
+    </body>
+</html>

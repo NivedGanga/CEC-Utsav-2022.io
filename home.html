@@ -1,1 +1,69 @@
-html
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="home_style.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="home_fun.js">
+
+
+</head>
+<body style="overflow:hidden ;">
+<div>
+  <div  class="logo">
+    <img src="Design Content/logo.png" style="width: 650px; height: 410px; padding-left: 85px;align-content: center;">
+  </div>
+<div style="position: relative; padding-top: 100px;">
+  <div class="div_class" >
+    <a href="home.html" class="active"><img src="Design Content/home_yellow.png" width=32px length=35px></img></a>
+  </div>
+  <div class="div_class">
+    <a  href="schedule.html"><B>SCHEDULE</B></a>
+  </div >
+  <div class="div_class">
+    <a class="btn" href="Teams.html"><B>TEAMS</B></a>
+  </div >
+  <div class="div_class">
+    <a href="gallery.html"><B>HIGHLIGHTS</B></a>
+  </div >
+  <div class="div_class">
+    <a href="result.html"><B>RESULTS</B></a>
+  </div>
+
+ 
+</div>
+<div class="adds">
+  <marquee  direction="right" ><b>PRODDEC</b></marquee>
+</div>
+</div>
+
+
+<script>
+(function() {
+
+    const idleDurationSecs = 30;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+</body>
+</html>

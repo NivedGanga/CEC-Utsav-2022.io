@@ -1,0 +1,83 @@
+body{
+  background-image: url("Design Content/new_bg.jpg");
+    height: 576px;
+    width: 1024px;
+    background-size:cover;
+    font-family: cursive;
+  }
+  
+  /* * {
+     cursor: none;
+    } */
+  
+  ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 10%;
+    top: 0;
+    background-color: #333;
+  }
+  
+
+  
+  a {
+    left: 0;
+    top: 0;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  
+  .active {
+    
+    width: 50%;
+  }
+  #bckBtn {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    background:  #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15%;
+  }
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height:4%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+.logo{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 0%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.div_class{
+    /* margin-left: 10px;
+   padding-left: 10px; */
+    
+    width: 20%;
+    /* background-color: red; */
+    float: left;
+    align-items: center;
+
+}
+.adds{
+    width: 1024px;
+    color: #ffffff;
+}

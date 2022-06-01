@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@710&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"></link>
+<style>
+* {box-sizing: border-box;}
+body {
+font-family: cursive;
+background-color: #000000f1;
+height: 576px;
+width: 1024px;
+}
+
+/* * {
+   cursor: none;
+  } */
+
+ul {
+  
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+  padding: 0;
+  left: 0%;
+  top: 0;
+  background-color: transparent;
+}
+
+
+a {
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+
+.active {
+  color: black;
+  width: 50%;
+}
+#bckBtn {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  background:  #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height:4%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration:576s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 310px) {
+  .text {font-size: 11px}
+}
+.onclick{
+  font-family: cursive;
+ color: rgb(255, 150, 21);
+ font-weight: bolder;
+ font-size: larger;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="slideshow-container">
+
+
+<div class="mySlides fade">
+  <img src="Gallery(Highlights) - Photos/Logo_Launch_1.jpg" style="height:576px; width: 1024px;">
+</div>
+
+<div class="mySlides fade">  
+  <img src="Gallery(Highlights) - Photos/Red_Team_Dance.jpg" style="height:576px; width: 1024px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="Gallery(Highlights) - Photos/Yellow_Team_Dance.jpg" style="height:576px; width: 1024px;">
+</div>
+
+<div class="mySlides fade">
+    <img src="Gallery(Highlights) - Photos/Blue_Team_Dance.jpg" style="height:576px; width: 1024px;">
+</div>
+<div class="mySlides fade">
+  <img src="Gallery(Highlights) - Photos/Green_Team_Dance.jpeg" style="height:576px; width: 1024px;">
+</div>
+
+
+
+  
+  <div  style="float: left;position: absolute;top: 470px;">
+    <div class="div_class" >
+      <a href="home.html" class="active"><img src="Design Content/home.png" width=30px length=30px></img></a>
+    </div>
+    <div class="div_class">
+      <a  href="schedule.html"><B>SCHEDULE</B></a>
+    </div >
+    <div class="div_class">
+      <a class="btn" href="Teams.html"><B>TEAMS</B></a>
+    </div >
+    <div class="div_class" >
+      <a href="gallery.html" class="onclick"><B>HIGHLIGHTS</B></a>
+    </div >
+    <div class="div_class">
+      <a href="result.html"><B>RESULTS</B></a>
+    </div>
+    <div class="adds">
+      <marquee  direction="right" ><img src="Design Content/home.png" ></marquee>
+    </div>
+   
+  </div>
+
+
+
+
+</div>
+</body>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+Timer();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+
+  setTimeout(showSlides, 9000); // Change image every 2 seconds
+}
+
+function Timer() {
+
+const idleDurationSecs = 135;     
+const redirectUrl = 'ad.html';  
+let idleTimeout; 
+
+const resetIdleTimeout = function() {
+
+      if(idleTimeout) clearTimeout(idleTimeout);
+
+   
+    idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+};
+
+
+resetIdleTimeout();
+
+
+['click', 'touchstart', 'mousemove'].forEach(evt => 
+    document.addEventListener(evt, resetIdleTimeout, false)
+);
+
+};
+
+</script>
+
+</body>
+</html> 

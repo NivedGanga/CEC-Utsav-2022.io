@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="home_style.css" rel="stylesheet"></link>
+<style>
+body{
+  background-image: url("Design Content/new_bg.jpg");
+  height:576px;
+  width:1024px;
+  font-family: cursive;
+}
+/* * {
+   cursor: none;
+  }
+ */
+
+
+
+
+.prod{
+font-family: "candara",sans-serif; 
+font-size: 30px; 
+color: white;
+right: 250px;
+
+}
+#myVideo {
+  /*position: fixed;*/
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+ul {
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  left: 10%;
+  top: 0;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.onclick{
+  font-family: cursive;
+ color: rgb(255, 150, 21);
+ font-weight: bolder;
+ font-size: larger;
+}
+
+#bckBtn {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  background:  #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 15%;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height:4%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+
+}
+</style>
+</head>
+<body style="overflow:hidden ;">
+
+  <div  style="float: left;position: absolute;top: 470px;">
+    <div class="div_class" >
+      <a href="home.html"><img src="Design Content/home.png" width=30px length=30px></img></a>
+    </div>
+    <div class="div_class">
+      <a  href="schedule.html" class="onclick"><B>SCHEDULE</B></a>
+    </div >
+    <div class="div_class">
+      <a class="btn" href="Teams.html"><B>TEAMS</B></a>
+    </div >
+    <div class="div_class" >
+      <a href="gallery.html" ><B>HIGHLIGHTS</B></a>
+    </div >
+    <div class="div_class">
+      <a href="result.html" ><B>RESULTS</B></a>
+    </div>
+  
+    <div class="adds">
+      <marquee  direction="right" ><img src="Design Content/home.png" ></marquee>
+    </div>
+   
+  </div>
+
+  <script>
+    (function() {
+    
+        const idleDurationSecs = 30;     
+        const redirectUrl = 'ad.html';  
+        let idleTimeout; 
+    
+        const resetIdleTimeout = function() {
+    
+              if(idleTimeout) clearTimeout(idleTimeout);
+    
+           
+            idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+        };
+    
+    
+        resetIdleTimeout();
+    
+     
+        ['click', 'touchstart', 'mousemove'].forEach(evt => 
+            document.addEventListener(evt, resetIdleTimeout, false)
+        );
+    
+    })();
+  </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<style>
+body{
+  /* background-image: url("Design Content/Untitled-2.png" ); */
+  /* background-image: url("Design Content/bg_design.png"); */
+  background-color: black;
+  background-size: cover;
+  
+  font-family: cursive;
+  font-weight: bolder;
+  height: 576px;
+    width: 1024px;
+
+}
+/* * {
+   cursor: none;
+  } */
+
+  .button{
+  
+  position: relative;
+  background-color: black;
+  border-radius: 0.5em;
+  font-size: 16px;
+  color: white;
+  padding: 0.4em 0.4em;
+  cursor:none;
+  user-select:none;
+  text-align: center;
+  text-decoration: none;
+  cursor: none;
+  transition-duration: 0.8s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.button:hover {
+  transition-duration: 0.1s;
+  background-color: #3A3A3A;
+}
+
+.button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0.5em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 2;
+  transition: all 1s;
+  box-shadow: 0 0 10px 20px white;
+}
+
+.button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 0.5em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.button:active {
+  top: 1px;
+}
+ul {
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  left: 10%;
+  top: 0%;
+  background-color: #333;
+}
+tr, td {
+  /* padding-left: 20px;
+  margin-left: 5px; */
+  padding-top: 30px;
+  position: relative;
+}
+
+
+
+
+
+a {
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+.div_class{
+    /* margin-left: 10px;
+   padding-left: 10px; */
+    height: 2cm;
+    width: 20%;
+    /* background-color: red; */
+    float: left;
+    align-items: center;
+
+}
+.onclick{
+  font-family: cursive;
+ color: rgb(255, 150, 21);
+ font-weight: bolder;
+ font-size: larger;
+}
+.fullpage{
+  width: 1024px;
+  height: 576px;
+  opacity: 1;
+  background-image: url("Design\ Content/bg_design.png");
+}
+
+</style>
+</head>
+<body style="overflow:hidden ;">
+<div class="fullpage">
+  
+  <div>
+    <table style="padding-top:30px"  style="padding-right:0px;" >
+
+      <tr>
+       <td>
+        <a  href="Blue.html">
+        <img  class = "button" src="Design Content/blue.jpg" style="width:220px; height:280px; margin-left: 20px;">
+        </a>
+       </td> 
+       <td>
+        <a  href="Red.html">
+        <img  class = "button" src="Design Content/red.jpg" style="width:220px; height:280px; padding-left: 1px; ">
+        </a>
+       </td>
+       <td>
+        <a  href="Yellow.html">
+        <img  class = "button" src="Design Content/Yellow.jpg" style="width:220px; height:280px; padding-left: 1px; ">
+        </a>
+       </td>
+       <td>
+        <a  href="Green.html">
+        <img  class = "button" src="Design Content/green.jpg" style="width:220px; height:280px; padding-left: 1px;  ">
+        </a>
+       </td>
+      </tr>
+      
+    </table>
+  </div>
+  <div style="margin-top: 105px;margin-left: 25px;">
+  <div >
+    <div class="div_class" >
+      <a href="home.html"  style="align-items: center;" ><img src="Design Content/home.png" width=30px length=30px></img></a>
+    </div>
+    <div class="div_class">
+      <a  href="schedule.html" style="align-items: center;"><B>SCHEDULE</B></a>
+    </div >
+    <div class="div_class">
+      <a class="onclick" href="Teams.html" style="align-items: center;"><B>TEAMS</B></a>
+    </div >
+    <div class="div_class">
+      <a href="gallery.html" style="align-items: center;"><B>HIGHLIGHTS</B></a>
+    </div >
+    <div class="div_class"> 
+      <a href="result.html" style="align-items: center;"><B>RESULTS</B></a>
+    </div>
+  </div>
+  <div style="width: 1024px" >
+    <marquee  direction="right" ><img src="Design Content/home.png" ></marquee>
+  </div>
+  </div>
+  </div>
+</div>
+<script>
+(function() {
+
+    const idleDurationSecs = 30;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+</script>
+
+</body>
+</html>
