@@ -72,7 +72,11 @@
     bottom: 0px;
     float: left;
     font-size: 10em;
-    color: rgb(255, 255, 255);
+    color: rgb(208, 132, 0);
+    
+    -webkit-text-fill-color: #ffc800; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #ff3535;
 
 }
 
@@ -82,6 +86,9 @@
     float: left;
     font-size: 8em;
     color: rgb(24, 255, 247);
+    -webkit-text-fill-color: #c0c0c0; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ffffff;
 }
 
 .rank34 {
@@ -91,6 +98,9 @@
     font-size: 6em;
     color: rgb(255, 209, 57);
     stroke: black;
+    -webkit-text-fill-color: #8b4513; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ffffff;
 
 }
 
