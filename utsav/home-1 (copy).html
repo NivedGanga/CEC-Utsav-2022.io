@@ -68,6 +68,105 @@
             </div>
         </div>
     </div>
+    <script>
+        (function() {
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            
+          
+
+            var num = getRandomInt(4);
+
+            if (num == 0){
+                const redirectUrl = 'ad.html';
+                const idleDurationSecs = 30;     
+            
+            let idleTimeout; 
+        
+            const resetIdleTimeout = function() {
+        
+                  if(idleTimeout) clearTimeout(idleTimeout);
+        
+               
+                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+            };
+        
+        
+            resetIdleTimeout();
+        
+         
+            ['click', 'touchstart', 'mousemove'].forEach(evt => 
+                document.addEventListener(evt, resetIdleTimeout, false)
+            );  
+            }else if(num == 1){
+                const redirectUrl = 'ad1.html';            const idleDurationSecs = 30;     
+            
+            let idleTimeout; 
+        
+            const resetIdleTimeout = function() {
+        
+                  if(idleTimeout) clearTimeout(idleTimeout);
+        
+               
+                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+            };
+        
+        
+            resetIdleTimeout();
+        
+         
+            ['click', 'touchstart', 'mousemove'].forEach(evt => 
+                document.addEventListener(evt, resetIdleTimeout, false)
+            );  
+            }else if(num == 2){
+                const redirectUrl = 'ad2.html';
+                const idleDurationSecs = 30;     
+            
+            let idleTimeout; 
+        
+            const resetIdleTimeout = function() {
+        
+                  if(idleTimeout) clearTimeout(idleTimeout);
+        
+               
+                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+            };
+        
+        
+            resetIdleTimeout();
+        
+         
+            ['click', 'touchstart', 'mousemove'].forEach(evt => 
+                document.addEventListener(evt, resetIdleTimeout, false)
+            );  
+            }else if(num == 3){
+                const redirectUrl = 'ad3.html';
+                const idleDurationSecs = 30;     
+            
+            let idleTimeout; 
+        
+            const resetIdleTimeout = function() {
+        
+                  if(idleTimeout) clearTimeout(idleTimeout);
+        
+               
+                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+            };
+        
+        
+            resetIdleTimeout();
+        
+         
+            ['click', 'touchstart', 'mousemove'].forEach(evt => 
+                document.addEventListener(evt, resetIdleTimeout, false)
+            );  
+            }
+
+        
+        })();
+        
+    </script>
 </body>
 
 </html>
